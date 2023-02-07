@@ -1,0 +1,17 @@
+<h1> Company List </h1>
+
+<%
+    companies = Company.all
+%>
+ 
+ <p>There are <%=Company.all.count%> companies in the database:</p>
+
+<ul>
+    <% for company in companies %>
+        <li> <%= company["name"] %> -- <%=company["city"]%>, <%=company["state"]%> </li>
+    <% end %>
+</ul>
+
+<p>
+    <h2><a href="/contacts"> Go to contacts. </a></h2>
+</p>
